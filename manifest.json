@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "id": "sensors.monitor",
+  "name": "Sensors",
+  "version": "0.1.0",
+  "author": "Nikolay Yasinskiy",
+  "license": "MIT",
+  "description": "A thermometer in the bar with the processor temperature next to it, and a popup of every temperature sensor: processor, graphics, memory, drives and fans.",
+  "kinds": [
+    "bar-widget"
+  ],
+  "entryPoints": {
+    "barWidget": "Panel.qml"
+  },
+  "barWidget": {
+    "displayName": "Sensors",
+    "description": "Processor, graphics, memory and drive temperatures, and fan speeds.",
+    "category": "System",
+    "allowMultiple": false,
+    "defaultSection": "right",
+    "defaults": {
+      "showTemperature": true,
+      "warnAt": 90,
+      "notifyHot": true,
+      "refreshSeconds": 2
+    },
+    "schema": [
+      {
+        "key": "showTemperature",
+        "type": "boolean",
+        "label": "Show temperature",
+        "description": "Show the processor temperature next to the thermometer.",
+        "defaultValue": true
+      },
+      {
+        "key": "warnAt",
+        "type": "integer",
+        "label": "Warning temperature (°C)",
+        "description": "Processor and graphics count as too hot from this temperature. Drives and memory use the limits their drivers report.",
+        "min": 60,
+        "max": 110,
+        "step": 1,
+        "defaultValue": 90
+      },
+      {
+        "key": "notifyHot",
+        "type": "boolean",
+        "label": "Notify when too hot",
+        "description": "Send a notification when a sensor reaches its limit.",
+        "defaultValue": true
+      },
+      {
+        "key": "refreshSeconds",
+        "type": "integer",
+        "label": "Refresh interval (seconds)",
+        "min": 1,
+        "max": 30,
+        "step": 1,
+        "defaultValue": 2
+      }
+    ]
+  }
+}
