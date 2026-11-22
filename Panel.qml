@@ -10,8 +10,8 @@ import "Model.js" as Model
 // popup listing every temperature sensor and fan.
 Panel {
   id: root
-  moduleName: "sensors.monitor"
-  ipcTarget: "sensors.monitor"
+  moduleName: "io.github.nydevel.sensors-monitor"
+  ipcTarget: "io.github.nydevel.sensors-monitor"
 
   readonly property string pluginDir: decodeURIComponent(String(Qt.resolvedUrl(".")).replace(/^file:\/\//, "")).replace(/\/$/, "")
   // Builds sensors.cpp on first use, then runs it.

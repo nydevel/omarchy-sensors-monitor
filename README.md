@@ -48,14 +48,23 @@ or manually:
 ```bash
 git clone https://github.com/nydevel/omarchy-sensors-monitor.git ~/.config/omarchy/plugins/sensors-monitor
 omarchy-shell shell rescanPlugins
-omarchy plugin enable sensors.monitor
+omarchy plugin enable io.github.nydevel.sensors-monitor
 ```
 
-Move it with `omarchy bar move sensors.monitor --section right --index 0`.
+Move it with `omarchy bar move io.github.nydevel.sensors-monitor --section right --index 0`.
+
+## Remove
+
+```bash
+omarchy plugin remove io.github.nydevel.sensors-monitor
+rm -rf ~/.cache/omarchy-sensors-monitor
+```
+
+The second line deletes the compiled helper; nothing else is left behind.
 
 ## Settings
 
-Set through the bar's widget settings, or `omarchy bar set sensors.monitor <key> <value>`:
+Set through the bar's widget settings, or `omarchy bar set io.github.nydevel.sensors-monitor <key> <value>`:
 
 | Key | Default | Meaning |
 |---|---|---|
@@ -123,4 +132,11 @@ MIT
 
 ```bash
 omarchy plugin add https://github.com/nydevel/omarchy-sensors-monitor.git --enable
+```
+
+Удаление:
+
+```bash
+omarchy plugin remove io.github.nydevel.sensors-monitor
+rm -rf ~/.cache/omarchy-sensors-monitor
 ```

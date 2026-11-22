@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "id": "sensors.monitor",
+  "id": "io.github.nydevel.sensors-monitor",
   "name": "Sensors",
   "version": "0.1.0",
   "author": "Nikolay Yasinskiy",
